@@ -53,7 +53,6 @@ exports.readByCount = async (req, res) => {
     const products = await Product.find({})
       .populate("productCategory", "category")
       .limit(6);
-
     res.json({ products });
   } catch (error) {
     console.log(error, "productController.readAll error");

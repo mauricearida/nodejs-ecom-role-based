@@ -8,7 +8,7 @@ const { authenticateJWT } = require("../middleware/authenticator");
 //routes
 router.post(
   "/",
-  authenticateJWT,
+  // authenticateJWT,
   upload.single("productImage"),
   productController.create
 );
